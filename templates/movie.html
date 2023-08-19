@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>{{ title }}</title>
+    <link href='{% static 'css/main.css' %}' type='text/css' rel='stylesheet'>
+</head>
+<body style="background-color: {{ color }}">
+    <h1>{{ title }}</h1>
+
+    <div class="flex-hor">
+        {% for poster in posters %}
+            <div class="poster">
+                <img src='{% static poster %}' alt='poster'>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="text">
+        {{ desc }}
+    </div>
+
+    <h3>Главные герои</h3>
+    <div class="flex-hor">
+        {% for photo, name, link in characters %}
+            <a href='{% url 'persona' title=title_link name=link%}'>
+                <div class='card'>
+                    <img src='{% static photo %}' alt='persona'>
+                    <div><p>{{ name }}</p></div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+    <div class="buttons">
+        <a href={% url 'index' %}><button>К выбору фильма</button></a>
+    </div>
+</body>
+</html>

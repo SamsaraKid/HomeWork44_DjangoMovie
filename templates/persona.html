@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+    <link href='{% static 'css/main.css' %}' type='text/css' rel='stylesheet'>
+</head>
+<body style="background-color: {{ color }}">
+    <h1>{{ name }}</h1>
+
+    <div class="flex-hor">
+        <div class="poster">
+            <img src='{% static photo %}' alt="photo">
+        </div>
+    </div>
+
+    <div class="text">
+        {{ bio }}
+    </div>
+
+    <div>
+        <b>Играет в фильме:</b>
+        {{ actor }}
+    </div>
+
+    <div class="buttons">
+        <a href={{ wiki }}><button>WIKI</button></a>
+        <a href={% url 'movie' title=title %}><button>К фильму</button></a>
+    </div>
+</body>
+</html>

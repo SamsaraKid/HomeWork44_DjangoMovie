@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор фильма</title>
+    <link href='{% static 'css/main.css' %}' type='text/css' rel='stylesheet'>
+</head>
+<body>
+    <div class="index">
+        <div class="flex-hor ">
+            <a href={% url 'movie' title='dune' %}>
+                <div class='card'>
+                    <img src='{% static 'img/dune/posters/poster1.webp' %}' alt='dune'>
+                    <div><p>Дюна (2021)</p></div>
+                </div>
+            </a>
+            <a href={% url 'movie' title='lotr' %}>
+                <div class='card'>
+                    <img src='{% static 'img/lotr/posters/poster1.webp' %}' alt='lotr'>
+                    <div><p>Властелин колец (2001-2003)</p></div>
+                </div>
+            </a>
+            <a href={% url 'movie' title='term' %}>
+                <div class='card'>
+                    <img src='{% static 'img/term/posters/poster1.webp' %}' alt='term'>
+                    <div><p>Терминатор (1984, 1991)</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.index{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index div{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.poster{
+    width: 25%;
+    aspect-ratio: 1 / 1.4142;
+    border: rgba(0, 0, 0, 0.5) solid 3px;
+    padding: 0.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.flex-hor{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8vw;
+    aspect-ratio: 1 / 2;
+    border: rgba(0, 0, 0, 0.5) solid 1px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    aspect-ratio: 1 / 1.4142;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.card div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card div p{
+    margin: auto;
+}
+
+body{
+    font-family: "Corbel";
+    text-align: center;
+}
+
+.text{
+    width: 50%;
+    margin: 2% auto;
+    text-align: justify;
+    border: rgba(0, 0, 0, 0.5) dashed 3px;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+}
+
+.buttons button{
+    margin-top: 2%;
+}
+
+a{
+    color: black;
+}
