@@ -11,16 +11,16 @@ def index(req):
 # функция получения данных
 def getdata(title):
     # задаём пути к папкам
-    posters_path = dir + '/movies/static/img/' + title + '/posters/'
-    photos_path = dir + '/movies/static/img/' + title + '/personas/'
-    personas_desc_path = dir + '/movies/static/text/' + title + '/personas/'
+    posters_path = dir + '/movies/static/' + title + '/img/posters/'
+    photos_path = dir + '/movies/static/' + title + '/img/personas/'
+    personas_desc_path = dir + '/movies/static/' + title + '/text/personas/'
 
     # массивы с путями к файлам
-    posters = list(map(lambda x: 'img/' + title + '/posters/' + x,
+    posters = list(map(lambda x: title + '/img/posters/' + x,
                        [f for f in os.listdir(posters_path) if os.path.isfile(os.path.join(posters_path, f))]))
-    photos = list(map(lambda x: 'img/' + title + '/personas/' + x,
+    photos = list(map(lambda x: title + '/img/personas/' + x,
                         [f for f in os.listdir(photos_path) if os.path.isfile(os.path.join(photos_path, f))]))
-    desc_file = dir + '/movies/static/text/' + title + '/desc.txt'
+    desc_file = dir + '/movies/static/' + title + '/text/desc.txt'
     personas_desc_files = list(map(lambda x: personas_desc_path + x,
                                    [f for f in os.listdir(personas_desc_path) if
                                     os.path.isfile(os.path.join(personas_desc_path, f))]))
